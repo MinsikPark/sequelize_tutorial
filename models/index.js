@@ -1,5 +1,5 @@
 const path = require('path');
-const Sequelize = requir('sequelize');
+const Sequelize = require('sequelize');
 
 const env = process.env.NODE_ENV || 'development';
 const config = require(path.join(__dirname, '..', 'config', 'config.json'))[env];
