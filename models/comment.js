@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
             defaultValue : sequelize.literal('now()'),
         }
     }, {
-        timeStamp : false,
+        timestamps : false,
+        freezeTableName: true
     });
 }

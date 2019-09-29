@@ -18,8 +18,8 @@ module.exports = (sequelize, DataTypes) => {
             allowNull : false,
             dafaultValue : sequelize.literal('now()'),
         },
-
     },{
-        timestamps : false,
+        timestamps : false, // true이면 자동으로 createdAt과 updatedAt 컬럼을 추가함.
+        freezeTableName: true
     })
 }

@@ -14,9 +14,9 @@ db.Sequelize = Sequelize;
 
 // model 매핑
 db.User = require('./user')(sequelize, Sequelize); 
-db.comment = require('./comment')(sequelize, Sequelize); 
+db.Comment = require('./comment')(sequelize, Sequelize); 
 
 // 종속관계 설정
-db.User.hasMany(db.comment, {foreignKey : 'commenter', sourceKey : 'id'});
-db.comment.belongsTo(db.User, {foreignKey : 'commenter', targetKey :'id'});
+db.User.hasMany(db.Comment, {foreignKey : 'commenter', sourceKey : 'id'});
+db.Comment.belongsTo(db.User, {foreignKey : 'commenter', targetKey :'id'});
 module.exports = db;
